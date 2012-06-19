@@ -45,8 +45,41 @@
     segmentedLine = segmented;
 }
 
+- (CGGradientRef)createNormalGradient
+{
+    CGFloat locations[3];
+    CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
+    NSMutableArray *colors = [NSMutableArray arrayWithCapacity:3];
+    UIColor *color = [UIColor colorWithRed:0.283 green:0.32 blue:0.414 alpha:1.0];
+    [colors addObject:(id)[color CGColor]];
+    locations[0] = 0.0;
+    color = [UIColor colorWithRed:0.82 green:0.834 blue:0.87 alpha:1.0];
+    [colors addObject:(id)[color CGColor]];
+    locations[1] = 1.0;
+    color = [UIColor colorWithRed:0.186 green:0.223 blue:0.326 alpha:1.0];
+    [colors addObject:(id)[color CGColor]];
+    locations[2] = 0.483;  
+    
+    CGGradientRef ret = CGGradientCreateWithColors(space, (__bridge CFArrayRef)colors, locations);
+    CGColorSpaceRelease(space);
+    return ret;
+}
+
 -(void)drawShape {
     CGContextRef contextRef = UIGraphicsGetCurrentContext();    
+    
+    CGGradientRef newGradient = [self createNormalGradient];
+    CGContextDrawLinearGradient(contextRef, newGradient, 
+                                CGPointMake(0, 0),
+                                CGPointMake(self.frame.size.width, self.frame.size.height), kCGGradientDrawsBeforeStartLocation);
+    /*
+    void CGContextDrawLinearGradient(
+                                     CGContextRef context,
+                                     CGGradientRef gradient,
+                                     CGPoint startPoint,
+                                     CGPoint endPoint,
+                                     CGGradientDrawingOptions options
+                                     );*/
     
     float minDimension = MIN(self.frame.size.width, self.frame.size.height);
     CGPoint center = CGPointMake(minDimension / 2.0, minDimension / 2.0 - 5.0);
