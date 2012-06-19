@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9AD31121590110F00BC0C29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AD31111590110F00BC0C29 /* Foundation.framework */; };
+		A9AD31151590110F00BC0C29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD31141590110F00BC0C29 /* main.m */; };
+		A9AD31191590110F00BC0C29 /* Lab2A.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9AD31181590110F00BC0C29 /* Lab2A.1 */; };
+		A9AD31211590118800BC0C29 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD31201590118800BC0C29 /* PolygonShape.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9AD310B1590110F00BC0C29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				A9AD31191590110F00BC0C29 /* Lab2A.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A9AD310D1590110F00BC0C29 /* Lab2A */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab2A; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AD31111590110F00BC0C29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9AD31141590110F00BC0C29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9AD31171590110F00BC0C29 /* Lab2A-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab2A-Prefix.pch"; sourceTree = "<group>"; };
+		A9AD31181590110F00BC0C29 /* Lab2A.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Lab2A.1; sourceTree = "<group>"; };
+		A9AD311F1590118800BC0C29 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
+		A9AD31201590118800BC0C29 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9AD310A1590110F00BC0C29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AD31121590110F00BC0C29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9AD31021590110F00BC0C29 = {
+			isa = PBXGroup;
+			children = (
+				A9AD31131590110F00BC0C29 /* Lab2A */,
+				A9AD31101590110F00BC0C29 /* Frameworks */,
+				A9AD310E1590110F00BC0C29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9AD310E1590110F00BC0C29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD310D1590110F00BC0C29 /* Lab2A */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9AD31101590110F00BC0C29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD31111590110F00BC0C29 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9AD31131590110F00BC0C29 /* Lab2A */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD31141590110F00BC0C29 /* main.m */,
+				A9AD311F1590118800BC0C29 /* PolygonShape.h */,
+				A9AD31201590118800BC0C29 /* PolygonShape.m */,
+				A9AD31161590110F00BC0C29 /* Supporting Files */,
+			);
+			path = Lab2A;
+			sourceTree = "<group>";
+		};
+		A9AD31161590110F00BC0C29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD31181590110F00BC0C29 /* Lab2A.1 */,
+				A9AD31171590110F00BC0C29 /* Lab2A-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9AD310C1590110F00BC0C29 /* Lab2A */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AD311C1590110F00BC0C29 /* Build configuration list for PBXNativeTarget "Lab2A" */;
+			buildPhases = (
+				A9AD31091590110F00BC0C29 /* Sources */,
+				A9AD310A1590110F00BC0C29 /* Frameworks */,
+				A9AD310B1590110F00BC0C29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab2A;
+			productName = Lab2A;
+			productReference = A9AD310D1590110F00BC0C29 /* Lab2A */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9AD31041590110F00BC0C29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A9AD31071590110F00BC0C29 /* Build configuration list for PBXProject "Lab2A" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9AD31021590110F00BC0C29;
+			productRefGroup = A9AD310E1590110F00BC0C29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9AD310C1590110F00BC0C29 /* Lab2A */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9AD31091590110F00BC0C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AD31151590110F00BC0C29 /* main.m in Sources */,
+				A9AD31211590118800BC0C29 /* PolygonShape.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9AD311A1590110F00BC0C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A9AD311B1590110F00BC0C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A9AD311D1590110F00BC0C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lab2A/Lab2A-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9AD311E1590110F00BC0C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lab2A/Lab2A-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9AD31071590110F00BC0C29 /* Build configuration list for PBXProject "Lab2A" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AD311A1590110F00BC0C29 /* Debug */,
+				A9AD311B1590110F00BC0C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9AD311C1590110F00BC0C29 /* Build configuration list for PBXNativeTarget "Lab2A" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AD311D1590110F00BC0C29 /* Debug */,
+				A9AD311E1590110F00BC0C29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9AD31041590110F00BC0C29 /* Project object */;
+}
