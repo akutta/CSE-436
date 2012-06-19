@@ -16,6 +16,7 @@
 		A9AD31AD1590326E00BC0C29 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD31A91590326E00BC0C29 /* PolygonShape.m */; };
 		A9AD31AE1590326E00BC0C29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD31AB1590326E00BC0C29 /* ViewController.m */; };
 		A9AD31B11590330400BC0C29 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AD31AF1590330400BC0C29 /* ViewController.xib */; };
+		A9AD31B41590375900BC0C29 /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD31B31590375900BC0C29 /* PolygonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		A9AD31AA1590326E00BC0C29 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A9AD31AB1590326E00BC0C29 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A9AD31B01590330400BC0C29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A9AD31B21590375900BC0C29 /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
+		A9AD31B31590375900BC0C29 /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +83,15 @@
 		A9AD31951590323200BC0C29 /* Lab3 */ = {
 			isa = PBXGroup;
 			children = (
-				A9AD31AF1590330400BC0C29 /* ViewController.xib */,
 				A9AD31A61590326E00BC0C29 /* AppDelegate.h */,
 				A9AD31A71590326E00BC0C29 /* AppDelegate.m */,
 				A9AD31A81590326E00BC0C29 /* PolygonShape.h */,
 				A9AD31A91590326E00BC0C29 /* PolygonShape.m */,
+				A9AD31B21590375900BC0C29 /* PolygonView.h */,
+				A9AD31B31590375900BC0C29 /* PolygonView.m */,
 				A9AD31AA1590326E00BC0C29 /* ViewController.h */,
 				A9AD31AB1590326E00BC0C29 /* ViewController.m */,
+				A9AD31AF1590330400BC0C29 /* ViewController.xib */,
 				A9AD31961590323200BC0C29 /* Supporting Files */,
 			);
 			path = Lab3;
@@ -169,6 +174,7 @@
 				A9AD31AC1590326E00BC0C29 /* AppDelegate.m in Sources */,
 				A9AD31AD1590326E00BC0C29 /* PolygonShape.m in Sources */,
 				A9AD31AE1590326E00BC0C29 /* ViewController.m in Sources */,
+				A9AD31B41590375900BC0C29 /* PolygonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
