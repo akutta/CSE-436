@@ -21,13 +21,18 @@
 
 -(void)updateLabels {
     shapeName.text = [polygon name];
-    degreeLabel.text = [NSString stringWithFormat:@"Degrees:  %.02f",[polygon angleInDegrees]];
-    radianLabel.text = [NSString stringWithFormat:@"Radians:  %.02f",[polygon angleInRadians]];
+    degreeLabel.text = [NSString stringWithFormat:@"%.02f",[polygon angleInDegrees]];
+    radianLabel.text = [NSString stringWithFormat:@"%.02f",[polygon angleInRadians]];
     numberOfSidesLabel.text = [NSString stringWithFormat:@"%u",[polygon numberOfSides]];
     
     
     [polyView setPoints:[PolygonView pointsForPolygonInRect:polyView.frame numberOfSides:[polygon numberOfSides]]];
     [self lineTypeChanged:nil];
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:[polygon numberOfSides] forKey:@"numSides"];    
+    [defaults synchronize];
 }
 
 -(IBAction)lineTypeChanged:(id)sender {
@@ -80,11 +85,23 @@
 
 - (void)viewDidLoad
 {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int numSides = [defaults integerForKey:@"numSides"];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    polygon = [[PolygonShape alloc] initWithNumberOfSides:numberOfSidesLabel.text.integerValue 
-                                     minimumNumberOfSides:3 
-                                     maximumNumberOfSides:12];
+    if ( numSides == 0 ) {
+        NSLog(@"Using Default Value.");
+        polygon = [[PolygonShape alloc] initWithNumberOfSides:numberOfSidesLabel.text.integerValue 
+                                         minimumNumberOfSides:3 
+                                         maximumNumberOfSides:12];
+    } else {
+        NSLog(@"Loading From User Preferences");
+        polygon = [[PolygonShape alloc] initWithNumberOfSides:numSides
+                                         minimumNumberOfSides:3 
+                                         maximumNumberOfSides:12];
+    }
     
     rangeSides.text = [NSString stringWithFormat:@"Range: ( %u - %u )",
                        [polygon minimumNumberOfSides],

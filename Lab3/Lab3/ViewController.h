@@ -20,7 +20,6 @@
     
     IBOutlet PolygonView* polyView;
     
-    @private
     PolygonShape *polygon;
 }
 

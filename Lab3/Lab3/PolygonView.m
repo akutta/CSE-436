@@ -17,7 +17,7 @@
     float minDimension = MIN(rect.size.width, rect.size.height);
     
     CGPoint center = CGPointMake(minDimension / 2.0, minDimension / 2.0 - 5.0);
-    float radius = 0.9 * center.x;
+    float radius = 0.8 * center.x;
     NSMutableArray *result = [NSMutableArray array];
     float angle = (2.0 * M_PI) / numberOfSides;
     float exteriorAngle = M_PI - angle;
