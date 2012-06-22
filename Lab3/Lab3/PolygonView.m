@@ -6,11 +6,14 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "ViewController.h"
+#import "AppDelegate.h"
 #import "PolygonView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation PolygonView
 @synthesize  angleOffset = _angleOffset;
+
 
 + (NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides {
     
@@ -45,20 +48,24 @@
     segmentedLine = segmented;
 }
 
-- (CGGradientRef)createNormalGradient
+
+- (CGGradientRef)createGradient:(float)alpha blueStart:(float)blueLocation
 {
-    CGFloat locations[3];
+    CGFloat locations[4];
     CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
-    NSMutableArray *colors = [NSMutableArray arrayWithCapacity:3];
-    UIColor *color = [UIColor colorWithRed:0.283 green:0.32 blue:0.414 alpha:1.0];
+    NSMutableArray *colors = [NSMutableArray arrayWithCapacity:4];
+    UIColor *color = [UIColor blueColor];//[self colorByChangingAlphaTo:[UIColor blueColor] newAlpha:alpha];
     [colors addObject:(id)[color CGColor]];
     locations[0] = 0.0;
-    color = [UIColor colorWithRed:0.82 green:0.834 blue:0.87 alpha:1.0];
+    color = [self colorByChangingAlphaTo:[UIColor darkGrayColor] newAlpha:alpha];
     [colors addObject:(id)[color CGColor]];
-    locations[1] = 1.0;
-    color = [UIColor colorWithRed:0.186 green:0.223 blue:0.326 alpha:1.0];
+    locations[1] = 0.25;
+    color = [self colorByChangingAlphaTo:[UIColor darkGrayColor] newAlpha:alpha];
     [colors addObject:(id)[color CGColor]];
-    locations[2] = 0.483;  
+    locations[2] = blueLocation;
+    color = [UIColor blueColor];
+    [colors addObject:(id)[color CGColor]];
+    locations[3] = 1.0;
     
     CGGradientRef ret = CGGradientCreateWithColors(space, (__bridge CFArrayRef)colors, locations);
     CGColorSpaceRelease(space);
@@ -68,18 +75,17 @@
 -(void)drawShape {
     CGContextRef contextRef = UIGraphicsGetCurrentContext();    
     
-    CGGradientRef newGradient = [self createNormalGradient];
+    CGGradientRef newGradient = [self createGradient:1.0 blueStart:.75];
     CGContextDrawLinearGradient(contextRef, newGradient, 
                                 CGPointMake(0, 0),
-                                CGPointMake(self.frame.size.width, self.frame.size.height), kCGGradientDrawsBeforeStartLocation);
-    /*
-    void CGContextDrawLinearGradient(
-                                     CGContextRef context,
-                                     CGGradientRef gradient,
-                                     CGPoint startPoint,
-                                     CGPoint endPoint,
-                                     CGGradientDrawingOptions options
-                                     );*/
+                                CGPointMake(self.frame.size.width, 0),
+                                kCGGradientDrawsBeforeStartLocation);
+    
+    newGradient = [self createGradient:.25 blueStart:.6];
+    CGContextDrawLinearGradient(contextRef, newGradient, 
+                                CGPointMake(0, 0),
+                                CGPointMake(0,self.frame.size.height),
+                                kCGGradientDrawsBeforeStartLocation);
     
     float minDimension = MIN(self.frame.size.width, self.frame.size.height);
     CGPoint center = CGPointMake(minDimension / 2.0, minDimension / 2.0 - 5.0);
@@ -128,6 +134,51 @@
 
 - (void)setPoints:(NSArray*)pointArray {
     points = pointArray;
+}
+
+
+
+//
+// Modified version of http://www.cocoanetics.com/2009/10/manipulating-uicolors/
+//
+- (UIColor *)colorByChangingAlphaTo:(UIColor*)color newAlpha:(CGFloat)newAlpha
+{
+	// oldComponents is the array INSIDE the original color
+	// changing these changes the original, so we copy it
+	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([color CGColor]);
+	int numComponents = CGColorGetNumberOfComponents([color CGColor]);
+	CGFloat newComponents[4];
+    
+	switch (numComponents)
+	{
+		case 2:
+		{
+			//grayscale
+			newComponents[0] = oldComponents[0];
+			newComponents[1] = oldComponents[0];
+			newComponents[2] = oldComponents[0];
+			newComponents[3] = newAlpha;
+			break;
+		}
+		case 4:
+		{
+			//RGBA
+			newComponents[0] = oldComponents[0];
+			newComponents[1] = oldComponents[1];
+			newComponents[2] = oldComponents[2];
+			newComponents[3] = newAlpha;
+			break;
+		}
+	}
+    
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGColorRef newColor = CGColorCreate(colorSpace, newComponents);
+	CGColorSpaceRelease(colorSpace);
+    
+	UIColor *retColor = [UIColor colorWithCGColor:newColor];
+	CGColorRelease(newColor);
+    
+	return retColor;
 }
 
 @end

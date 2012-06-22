@@ -12,6 +12,8 @@
     NSArray *points;
     UILabel *shapeLabel;
     BOOL segmentedLine;
+    
+    CGPoint initialTouch;
 }
 
 @property (nonatomic) float angleOffset;
@@ -19,5 +21,6 @@
 - (void)setPoints:(NSArray*)points;
 -(void)setLineType:(BOOL)segmented;
 + (NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides;
+- (UIColor *)colorByChangingAlphaTo:(UIColor*)color newAlpha:(CGFloat)newAlpha;
 
 @end

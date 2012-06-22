@@ -23,7 +23,7 @@
     PolygonShape *polygon;
 }
 
-
+-(void)setRotationValue:(float)radians;
 -(IBAction)polyRotationSlider:(id)sender;
 -(IBAction)increase:(id)sender;
 -(IBAction)decrease:(id)sender;

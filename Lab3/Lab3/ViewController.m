@@ -14,6 +14,13 @@
 
 @implementation ViewController
 
+-(void)setRotationValue:(float)radians {
+    if ( radians <= 2*M_PI && radians >= 0 ) {
+        rotationSlider.value = radians * 180 / M_PI;
+        [polyView setNeedsDisplay];
+    }
+}
+
 -(IBAction)polyRotationSlider:(id)sender {
     polyView.angleOffset = rotationSlider.value * M_PI/180;
     [polyView setNeedsDisplay];
