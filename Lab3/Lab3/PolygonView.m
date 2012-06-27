@@ -35,13 +35,22 @@
     return result;
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+-(void)awakeFromNib {
+    int width = 150;
+    int height = 30;
+    int x = (self.frame.size.width - width) / 2;
+    int y = (self.frame.size.height - height) / 2 - 5;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    shapeLabel = label;
+    shapeLabel.backgroundColor = [UIColor clearColor];
+    shapeLabel.textAlignment = UITextAlignmentCenter;
+    
+    [self addSubview:(UIView*)shapeLabel];
+}
+
+- (void)setShapeName:(NSString*)shapeName {
+    shapeLabel.text = shapeName;
 }
 
 -(void)setLineType:(BOOL)segmented {
@@ -120,9 +129,6 @@
 -(void)setupViewLook {
     [self layer].borderColor = [[UIColor blackColor] CGColor];
     [self layer].borderWidth = 3.0f;
-    [self.window addSubview:shapeLabel];
-    [self.window bringSubviewToFront:shapeLabel];
-    shapeLabel.text = @"Test";
 }
 
 - (void)drawRect:(CGRect)rect {

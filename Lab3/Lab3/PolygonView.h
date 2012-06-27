@@ -18,6 +18,7 @@
 
 @property (nonatomic) float angleOffset;
 
+- (void)setShapeName:(NSString*)shapeName;
 - (void)setPoints:(NSArray*)points;
 -(void)setLineType:(BOOL)segmented;
 + (NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides;

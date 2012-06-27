@@ -33,6 +33,7 @@
     numberOfSidesLabel.text = [NSString stringWithFormat:@"%u",[polygon numberOfSides]];
     
     
+    [polyView setShapeName:[polygon name]];
     [polyView setPoints:[PolygonView pointsForPolygonInRect:polyView.frame numberOfSides:[polygon numberOfSides]]];
     [self lineTypeChanged:nil];
     
@@ -123,6 +124,11 @@
     maxSides.text = [NSString stringWithFormat:@"%u",[polygon maximumNumberOfSides]];
     
     rotationSlider.transform=CGAffineTransformRotate(rotationSlider.transform,90.0/180*M_PI);
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 2)];
+    label.text = @"Test";
+    [polyView addSubview:label];
     
     [self updateLabels];
     
