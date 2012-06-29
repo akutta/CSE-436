@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A940DAB3159D681F0050AC10 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A940DAB1159D681F0050AC10 /* DetailedViewController.m */; };
+		A940DAB4159D681F0050AC10 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A940DAB2159D681F0050AC10 /* DetailedViewController.xib */; };
 		A9A1E15415953A5400FCBE40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A1E15315953A5400FCBE40 /* UIKit.framework */; };
 		A9A1E15615953A5400FCBE40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A1E15515953A5400FCBE40 /* Foundation.framework */; };
 		A9A1E15815953A5400FCBE40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A1E15715953A5400FCBE40 /* CoreGraphics.framework */; };
@@ -23,11 +25,12 @@
 		A9A1E18515953B0100FCBE40 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A1E18315953B0100FCBE40 /* SecondViewController.xib */; };
 		A9A1E19715958B5A00FCBE40 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A1E19515958B5A00FCBE40 /* ThirdViewController.m */; };
 		A9A1E19815958B5A00FCBE40 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A1E19615958B5A00FCBE40 /* ThirdViewController.xib */; };
-		A9A1E1A115958FB000FCBE40 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A1E19F15958FB000FCBE40 /* DetailedViewController.m */; };
-		A9A1E1A215958FB000FCBE40 /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A1E1A015958FB000FCBE40 /* DetailedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A940DAB0159D681F0050AC10 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		A940DAB1159D681F0050AC10 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
+		A940DAB2159D681F0050AC10 /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
 		A9A1E14F15953A5400FCBE40 /* Lab4_noStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab4_noStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A1E15315953A5400FCBE40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9A1E15515953A5400FCBE40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,9 +54,6 @@
 		A9A1E19415958B5A00FCBE40 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		A9A1E19515958B5A00FCBE40 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		A9A1E19615958B5A00FCBE40 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		A9A1E19E15958FB000FCBE40 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
-		A9A1E19F15958FB000FCBE40 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
-		A9A1E1A015958FB000FCBE40 /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 				A9A1E17315953A5500FCBE40 /* FirstViewController.xib */,
 				A9A1E18315953B0100FCBE40 /* SecondViewController.xib */,
 				A9A1E19615958B5A00FCBE40 /* ThirdViewController.xib */,
-				A9A1E1A015958FB000FCBE40 /* DetailedViewController.xib */,
+				A940DAB2159D681F0050AC10 /* DetailedViewController.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				A9A1E16515953A5500FCBE40 /* FirstViewController.h */,
 				A9A1E18115953B0100FCBE40 /* SecondViewController.h */,
 				A9A1E19415958B5A00FCBE40 /* ThirdViewController.h */,
-				A9A1E19E15958FB000FCBE40 /* DetailedViewController.h */,
+				A940DAB0159D681F0050AC10 /* DetailedViewController.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 				A9A1E16615953A5500FCBE40 /* FirstViewController.m */,
 				A9A1E18215953B0100FCBE40 /* SecondViewController.m */,
 				A9A1E19515958B5A00FCBE40 /* ThirdViewController.m */,
-				A9A1E19F15958FB000FCBE40 /* DetailedViewController.m */,
+				A940DAB1159D681F0050AC10 /* DetailedViewController.m */,
 			);
 			name = "M Files";
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 				A9A1E17515953A5500FCBE40 /* FirstViewController.xib in Resources */,
 				A9A1E18515953B0100FCBE40 /* SecondViewController.xib in Resources */,
 				A9A1E19815958B5A00FCBE40 /* ThirdViewController.xib in Resources */,
-				A9A1E1A215958FB000FCBE40 /* DetailedViewController.xib in Resources */,
+				A940DAB4159D681F0050AC10 /* DetailedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 				A9A1E16715953A5500FCBE40 /* FirstViewController.m in Sources */,
 				A9A1E18415953B0100FCBE40 /* SecondViewController.m in Sources */,
 				A9A1E19715958B5A00FCBE40 /* ThirdViewController.m in Sources */,
-				A9A1E1A115958FB000FCBE40 /* DetailedViewController.m in Sources */,
+				A940DAB3159D681F0050AC10 /* DetailedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +352,7 @@
 				A9A1E17D15953A5500FCBE40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
