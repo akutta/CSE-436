@@ -18,21 +18,16 @@
 {   
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     //Initialize the array.
     listOfItems = [[NSMutableArray alloc] init];
     
-    NSArray *countriesToLiveInArray = [NSArray arrayWithObjects:@"Iceland", @"Greenland", @"Switzerland", @"Norway", @"New Zealand", @"Greece", @"Rome", @"Ireland", nil];
+    NSArray *countriesToLiveInArray = [NSArray arrayWithObjects:@"Germany", @"Italy", @"Netherlands", nil];
     NSDictionary *countriesToLiveInDict = [NSDictionary dictionaryWithObject:countriesToLiveInArray forKey:@"Countries"];
     
-    NSArray *countriesLivedInArray = [NSArray arrayWithObjects:@"India", @"U.S.A", nil];
+    NSArray *countriesLivedInArray = [NSArray arrayWithObjects:@"U.S.A", @"Germany", @"Spain", nil];
     NSDictionary *countriesLivedInDict = [NSDictionary dictionaryWithObject:countriesLivedInArray forKey:@"Countries"];
     
+
     [listOfItems addObject:countriesToLiveInDict];
     [listOfItems addObject:countriesLivedInDict];
 }
@@ -48,6 +43,15 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    if(section == 0)
+        return @"Countries to visit";
+    else
+        return @"Countries visited";
+}
+
 
 #pragma mark - Table view data source
 

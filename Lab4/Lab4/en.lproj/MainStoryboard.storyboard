@@ -150,20 +150,6 @@
             </objects>
             <point key="canvasLocation" x="683" y="277"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="E4W-tp-rvZ">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4IW-wF-kuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="azA-Yc-zxO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u7w-pW-V2F">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1102" y="275"/>
-        </scene>
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>

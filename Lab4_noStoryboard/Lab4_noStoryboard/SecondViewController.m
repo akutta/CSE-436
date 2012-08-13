@@ -30,10 +30,10 @@
 
     listOfItems = [[NSMutableArray alloc] init];
     
-    NSArray *countriesToLiveInArray = [NSArray arrayWithObjects:@"Iceland", @"Greenland", @"Switzerland", @"Norway", @"New Zealand", @"Greece", @"Rome", @"Ireland", nil];
+    NSArray *countriesToLiveInArray = [NSArray arrayWithObjects:@"Germany", @"Italy", @"Netherlands", nil];
     NSDictionary *countriesToLiveInDict = [NSDictionary dictionaryWithObject:countriesToLiveInArray forKey:@"Countries"];
     
-    NSArray *countriesLivedInArray = [NSArray arrayWithObjects:@"India", @"U.S.A", nil];
+    NSArray *countriesLivedInArray = [NSArray arrayWithObjects:@"U.S.A", @"Germany", @"Spain", nil];
     NSDictionary *countriesLivedInDict = [NSDictionary dictionaryWithObject:countriesLivedInArray forKey:@"Countries"];
     
     [listOfItems addObject:countriesToLiveInDict];
@@ -87,6 +87,14 @@
     [[cell textLabel] setText:cellValue];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    if(section == 0)
+        return @"Countries to visit";
+    else
+        return @"Countries visited";
 }
 
 #pragma mark - Table view delegate
